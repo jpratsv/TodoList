@@ -1,19 +1,21 @@
+
 const initialState = [{
     id: 1,
     todo: 'Comprar pan',
     done: false
 }];
 
-const todoReducer = (state = initialState , action)=> {
-
-if (action?.type === 'agregar') {
-    return [...state, action.paylod];
-}
-
+const todoReducer = ( state = initialState, action ) => {
+    
+    if ( action?.type === 'agregar' ) {
+        return [ ...state, action.payload ];
+    }
 
     return state;
 }
+
 let todos = todoReducer();
+
 
 const newTodo = {
     id: 2,
@@ -22,10 +24,15 @@ const newTodo = {
 }
 
 
-const action = {
-    type: 'agregar',    // le mandamos el tipo de acción a realizar 
-    payload: newTodo     // con que se debe de  realizar la acción 
+const agregarTodoAction = {
+    type: 'agregar',
+    payload: newTodo
 }
 
-todos = todoReducer( todos, action);
+
+todos = todoReducer( todos, agregarTodoAction );
+
+
+
 console.log(todos);
+
