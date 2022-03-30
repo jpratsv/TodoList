@@ -1,6 +1,6 @@
 import React, { useReducer, useEffect } from "react";
-import { todoReducer } from "./todoReducer";
 
+import { todoReducer } from "./todoReducer";
 import { TodoList } from "./TodoList";
 import { TodoAdd } from "./TodoAdd";
 import "./styles.css";
@@ -41,7 +41,12 @@ export const TodoApp = () => {
 
   return (
     <div>
-      <h1>TodoApp ( {todos.length} ) </h1>
+      <h1>React Todos - REST ( {todos.length} ) </h1>
+
+      <hr />
+      <h3> Tachar o desmarcar directamente en el elemento</h3>
+      <h6>Realizado con LocalStore simulando un BACKEND</h6>
+
       <hr />
 
       <div className="row">
